@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessing elements in DOM in javascript</title>
+    <!-- Inline css for beautifying our work -->
+    <style>
+        html{ font-family: san-serif; color: #333;}
+        body{max-width: 500px; margin: 0 auto; padding: 0 15px;}
+        div, article{padding: 10px; margin: 5px; border: 1px solid #dedede}
+    </style>
+</head>
+<body>
+    <div><!-- onclick, we've left-clicked on the click me button -->
+        <button type="button" onclick = "alert('You have clicked on the button')">Click me</button>
+        <p>Try to change me</p>
+    </div>
+    
+     <div>
+     <!-- contextmenu button, changing from left to right click button -->
+     <button type="button" oncontextmenu="alert('You have clicked on an alert')">Right click on me</button>
+     <a href="#" oncontextmenu="alert('You have right clicked a link')">Right clicked a link</a>
+     </div>
+     
+     <div>
+         <!-- onmouseover button, placing a cursor over a button -->
+     <button type="button" onmouseover="alert('You have placed the mouse on the button')">Place mouse over me</button>
+     </div>
+     
+     <div>
+         <!-- onmouseoout button, removing the mouse off the button -->
+     <button type="button" onmouseout="alert('You have moved off the button')">you moved the mouse out of the button</button>
+     <a href="#" onmouseout="alert('You moved the mouse out of the link')">You moved the mouse out of the link</a>
+     <input type="text" onkeydown="confirm('You have pressed the downkey inside the textarea')">
+     </div>
+     
+     <button id="dog">click me</button>
+     <p>I will change</p>
+
+      <div>
+        <button id="pop">Click me phillip</button>
+        <div id="oop">Something</div>
+      </div>
+     
+
+     <h2>Query Selector all</h2>
+    <div class="demo-query-all">Access me by selector all(1)</div>
+    <div class="demo-query-all">Access me by selector all(2)</div>
+
+    <script src="event.js">
+          
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessing elements in DOM in javascript</title>
+    <!-- Inline css for beautifying our work -->
+    <style>
+        html{ font-family: san-serif; color: #333;}
+        body{max-width: 500px; margin: 0 auto; padding: 0 15px;}
+        div, article{padding: 10px; margin: 5px; border: 1px solid #dedede}
+    </style>
+</head>
+<body>
+    
+     <button onclick="changeMe()">Click me</button>
+     <p>Try to change me</p>
+
+     <button id="pop">Click me phillip</button>
+     <div id="oop">Something</div>
+
+     <h2>Query Selector all</h2>
+    <div class="demo-query-all">Access me by selector all(1)</div>
+    <div class="demo-query-all">Access me by selector all(2)</div>
+
+<!-- Declaration of javascript @ the end of the body tag -->
+    <script>
+        const demoQueryAll = document.querySelectorAll('.demo-query-all')
+        demoQueryAll.forEach( bp => {
+            bp.style.border = '5px solid yellow';
+        })
+
+        function changeMe(){
+            let p = document.querySelector('p')
+            p.textContent = 'I have changed becoz of the in-line style handler'
+            p.style.border = '5px solid green'
+        }
+
+        function changeMe2(){
+            let k = document.getElementById('oop')
+            k.textContent = 'change because of the event-handler'
+            k.style.border = '5px dotted green'
+        }
+        const butt = document.querySelector('#pop')
+        butt.onclick = changeMe2
+
+    </script>
+</body>
+</html>
